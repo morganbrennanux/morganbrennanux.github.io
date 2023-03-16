@@ -4,16 +4,39 @@
   --white: #FBFBFF;
   --black: #1D1D1D;
 }
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
 
 h1,
 h2,
 h3,
 h4 {
   font-family: "open sans", sans-serif;
+  color: var(--dark-grey);
 }
 
 p {
   font-family: "esteban", serif;
+  font-size: 24px;
+  color: var(--black);
 }
 
 .topnav {
@@ -22,10 +45,12 @@ p {
   margin-right: 48px;
   justify-content: space-between;
   align-items: center;
+  padding-top: 32px;
 }
 
 .right-nav {
   display: flex;
+  align-items: center;
 }
 
 .menu {
@@ -33,7 +58,24 @@ p {
 }
 
 a.menu-item {
+  text-decoration: none;
+  font-family: "open sans", sans-serif;
+  font-size: 16px;
+  color: var(--black);
   padding-left: 24px;
+}
+
+button {
+  appearance: none;
+  box-shadow: none;
+  border: 1px solid var(--black);
+  font-family: "open sans", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--white);
+  background-color: var(--primary);
+  padding: 16px;
+  border-radius: 8px; 
 }
 
 .logo {
@@ -48,4 +90,40 @@ div.hero {
   margin-left: 48px;
   margin-right: 48px;
   text-align: center;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 48px;
+  padding-bottom: 24px;
+}
+
+span {
+  color: var(--primary);
+}
+
+span.italics {
+  font-style: italic;
+}
+
+section.lets-connect {
+  width: 100%;
+  background-color: var(--primary);
+}
+
+h4,
+a.linkedin {
+  text-decoration: none;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--white);
+  text-align: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  cursor: pointer;
+}
+
+i {
+  padding-left: 24px;
+  color: var(--white);
 }
