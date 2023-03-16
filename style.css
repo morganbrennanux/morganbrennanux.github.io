@@ -5,9 +5,47 @@
   --black: #1D1D1D;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-family: "open sans", sans-serif;
+}
+
+p {
+  font-family: "esteban", serif;
+}
+
+.topnav {
+  display: flex;
+  margin-left: 48px;
+  margin-right: 48px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right-nav {
+  display: flex;
+}
+
+.menu {
+  padding-right: 32px;
+}
+
+a.menu-item {
+  padding-left: 24px;
+}
+
 .logo {
   width: 48px;
   height: 48px;
+  padding-right: 32px;
+}
+
+div.hero {
+  padding-top: 160px;
+  padding-bottom: 200px;
   margin-left: 48px;
-  justify-content: space-between;
+  margin-right: 48px;
+  text-align: center;
 }
