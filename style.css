@@ -4,6 +4,9 @@
   --white: #FBFBFF;
   --black: #1D1D1D;
 }
+
+/* general css */
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -25,6 +28,10 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+body{
+  background-color: var(--white);
+}
+
 h1,
 h2,
 h3,
@@ -38,6 +45,9 @@ p {
   font-size: 24px;
   color: var(--black);
 }
+
+
+/* nav */
 
 .topnav {
   display: flex;
@@ -65,6 +75,14 @@ a.menu-item {
   padding-left: 24px;
 }
 
+a.menu-item:hover {
+  color: var(--primary);
+}
+
+a.menu-item:active {
+  font-weight: 700;
+}
+
 button {
   appearance: none;
   box-shadow: none;
@@ -74,8 +92,18 @@ button {
   font-size: 16px;
   color: var(--white);
   background-color: var(--primary);
-  padding: 16px;
+  height: 48px;
+  padding-left: 16px;
+  padding-right: 16px;
   border-radius: 8px; 
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--white);
+  border: 1px solid var(--dark-grey);
+  color: var(--dark-grey);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .logo {
@@ -84,11 +112,14 @@ button {
   padding-right: 32px;
 }
 
+
+/* hero section */
+
 div.hero {
   padding-top: 160px;
   padding-bottom: 200px;
-  margin-left: 48px;
-  margin-right: 48px;
+  margin-left: 162px;
+  margin-right: 162px;
   text-align: center;
 }
 
@@ -106,9 +137,13 @@ span.italics {
   font-style: italic;
 }
 
+
+/* let's connect section */
+
 section.lets-connect {
   width: 100%;
   background-color: var(--primary);
+  height: 92px;
 }
 
 h4,
@@ -123,7 +158,94 @@ a.linkedin {
   cursor: pointer;
 }
 
-i {
+i.fa-linkedin {
   padding-left: 24px;
-  color: var(--white);
+}
+
+h4:hover {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  scale: 105%;
+  font-weight: 800px;
+  transition: 0.2s;
+}
+
+
+/* my work section */
+
+.work {
+  padding-top: 64px;
+  margin-left: 162px;
+  margin-right: 162px;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--dark-grey); 
+  justify-items: baseline;
+}
+
+span.bar {
+  font-weight: 400;
+  color: var(--dark-grey);
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+span.behance {
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--dark-grey);
+}
+
+span.behance:hover {
+  color: var(--primary);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+i.fa-square-behance {
+  padding-left: 4px;
+  align-items: baseline;
+}
+
+.projects {
+  padding-top: 48px;
+}
+
+.case-study {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* about me section */
+
+div.about {
+  padding-top: 64px;
+  margin-left: 162px;
+  margin-right: 162px;
+}
+
+
+/* bottom section */
+
+.view-site {
+  padding-top: 124px;
+  margin-left: 162px;
+  margin-right: 162px;
+  margin-bottom: 64px;
+  text-align: center;
+}
+
+p.check-github {
+  font-size: 32px;
+  padding-bottom: 24px;
+}
+
+button.large {
+  height: 80px;
+  padding-left: 32px;
+  padding-right: 32px;
+  font-size: 32px;
 }
