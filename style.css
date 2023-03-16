@@ -1,0 +1,13 @@
+* {
+  --primary: #9381FF;
+  --dark-grey: #333333;
+  --white: #FBFBFF;
+  --black: #1D1D1D;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  margin-left: 48px;
+  justify-content: space-between;
+}
