@@ -28,8 +28,10 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
-body{
+body {
   background-color: var(--white);
+  max-width: 1440px;
+  margin: auto;
 }
 
 h1,
@@ -44,6 +46,7 @@ p {
   font-family: "esteban", serif;
   font-size: 24px;
   color: var(--black);
+  padding-top: 24px;
 }
 
 
@@ -51,8 +54,8 @@ p {
 
 .topnav {
   display: flex;
-  margin-left: 48px;
-  margin-right: 48px;
+  padding-left: 48px;
+  padding-right: 48px;
   justify-content: space-between;
   align-items: center;
   padding-top: 32px;
@@ -116,17 +119,13 @@ button:hover {
 /* hero section */
 
 div.hero {
-  padding-top: 160px;
-  padding-bottom: 200px;
-  margin-left: 162px;
-  margin-right: 162px;
+  padding: 160px 162px 200px 162px;
   text-align: center;
 }
 
 h1 {
   font-weight: 800;
   font-size: 48px;
-  padding-bottom: 24px;
 }
 
 span {
@@ -141,9 +140,18 @@ span.italics {
 /* let's connect section */
 
 section.lets-connect {
-  width: 100%;
+  width: 100vw;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
   background-color: var(--primary);
   height: 92px;
+}
+
+section#connect-linkedin {
+  width: 100%;
 }
 
 h4,
@@ -173,9 +181,10 @@ h4:hover {
 /* my work section */
 
 .work {
-  padding-top: 64px;
-  margin-left: 162px;
-  margin-right: 162px;
+  position: relative;
+  padding-top: 154px;
+  padding-left: 162px;
+  padding-right: 162px;
 }
 
 h2 {
@@ -223,17 +232,18 @@ i.fa-square-behance {
 
 div.about {
   padding-top: 64px;
-  margin-left: 162px;
-  margin-right: 162px;
+  padding-left: 162px;
+  padding-right: 162px;
 }
+
 
 
 /* bottom section */
 
 .view-site {
   padding-top: 124px;
-  margin-left: 162px;
-  margin-right: 162px;
+  padding-left: 162px;
+  padding-right: 162px;
   margin-bottom: 64px;
   text-align: center;
 }
