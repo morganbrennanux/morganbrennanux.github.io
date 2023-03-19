@@ -30,8 +30,6 @@ time, mark, audio, video {
 
 body {
   background-color: var(--white);
-  max-width: 1440px;
-  margin: auto;
 }
 
 h1,
@@ -49,6 +47,7 @@ p {
   padding-top: 24px;
 }
 
+/* DESKTOP */
 
 /* nav */
 
@@ -75,11 +74,12 @@ a.menu-item {
   font-family: "open sans", sans-serif;
   font-size: 16px;
   color: var(--black);
-  padding-left: 24px;
+  padding: 12px;
 }
 
 a.menu-item:hover {
-  color: var(--primary);
+  color: var(--white);
+  background-color: rgba(147, 129, 255, 0.75);
 }
 
 a.menu-item:active {
@@ -115,11 +115,23 @@ button:hover {
   padding-right: 32px;
 }
 
+.mobile-nav {
+  display: none;
+  position: absolute;
+  top: 48px;
+  left: 12px;
+  right: 12px;
+  padding-bottom: 32px;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
 
 /* hero section */
 
 div.hero {
-  padding: 160px 162px 200px 162px;
+  padding: 160px 162px 196px 162px;
   text-align: center;
 }
 
@@ -140,17 +152,9 @@ span.italics {
 /* let's connect section */
 
 section.lets-connect {
-  width: 100vw;
-  position: absolute;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  width: 100%;
   background-color: var(--primary);
-  height: 92px;
-  z-index:10
 }
-
 
 h4,
 a.linkedin {
@@ -179,22 +183,23 @@ h4:hover {
 /* my work section */
 
 .work {
-  position: relative;
-  padding-top: 154px;
-  padding-left: 162px;
-  padding-right: 162px;
+  padding: 80px 162px;
+  background-color: #333333;
 }
 
 h2 {
   font-size: 32px;
   font-weight: 800;
-  color: var(--dark-grey); 
   justify-items: baseline;
+}
+
+h2.dark {
+  color: var(--white);
 }
 
 span.bar {
   font-weight: 400;
-  color: var(--dark-grey);
+  color: var(--white);
   padding-left: 16px;
   padding-right: 16px;
 }
@@ -202,7 +207,11 @@ span.bar {
 span.behance {
   font-size: 24px;
   font-weight: 400;
-  color: var(--dark-grey);
+  color: var(--white);
+}
+
+span.behance-mobile {
+  display: none;
 }
 
 span.behance:hover {
@@ -217,7 +226,12 @@ i.fa-square-behance {
 }
 
 .projects {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto; 
+  gap: 1.6rem;
   padding-top: 48px;
+  justify-content: space-evenly;
 }
 
 .case-study {
@@ -229,20 +243,22 @@ i.fa-square-behance {
 /* about me section */
 
 div.about {
-  padding-top: 64px;
-  padding-left: 162px;
-  padding-right: 162px;
+  padding: 80px 162px;
 }
 
+/* divider */
+
+hr {
+  border-top: rgba(51, 51, 51, .2);
+  margin-left: 162px;
+  margin-right: 162px;
+}
 
 
 /* bottom section */
 
 .view-site {
-  padding-top: 124px;
-  padding-left: 162px;
-  padding-right: 162px;
-  margin-bottom: 64px;
+  padding: 80px 162px;
   text-align: center;
 }
 
@@ -256,4 +272,180 @@ button.large {
   padding-left: 32px;
   padding-right: 32px;
   font-size: 32px;
+}
+
+button.mobile-bottom {
+  display: none;
+}
+
+/* MOBILE */
+
+@media (max-width: 816px) {
+
+  .mobile-nav {
+    display: flex;
+    background-color: var(--white);
+  }
+
+  .toggle-button {
+    display: flex;
+  }
+
+  .topnav {
+    display: none;
+  }
+
+  .mobile-logo {
+    height: 32px;
+    width: 32px;
+    top: 48px;
+    left: 12px;
+  }
+
+  button.mobile {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    height: 32px;
+  }
+
+  .toggle-button {
+    text-decoration: none;
+    color: var(--dark-grey);
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  div.hero {
+    position: relative;
+    min-width: 320px;
+    text-align: center;
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 32px;
+    padding: 116px 27.5px 0 27.5px;
+  }
+
+  p.subhero {
+    min-width: 320px;
+    font-size: 16px;
+    padding: 24px 27.5px 48px 27.5px;
+  }
+
+  section.lets-connect {
+    width: 100vw;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    background-color: var(--primary);
+    height: 48px;
+    z-index:10
+  }
+  
+  
+  h4,
+  a.linkedin {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--white);
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    cursor: pointer;
+  }
+  
+  i.fa-linkedin {
+    padding-left: 12px;
+  }
+  
+  .work {
+    position: relative;
+    padding: 96px 12px 48px;
+    background-color: var(--dark-grey);
+  }
+  
+  h2 {
+    font-size: 20px;
+    font-weight: 800;
+    justify-items: baseline;
+  }
+  
+  h2.dark {
+    color: var(--white);
+  }
+  
+  span.bar {
+    display: none;
+  }
+  
+  span.behance {
+    display: none;
+  }
+
+  span.behance-mobile {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--white);
+  }
+  
+  span.behance-mobile:hover {
+    color: var(--primary);
+    transition: 0.2s;
+    cursor: pointer;
+  }
+  
+  i.fa-square-behance {
+    padding-left: 4px;
+    align-items: baseline;
+  }
+  
+  .projects {
+    display: block;
+    padding-top: 48px;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .case-study {
+    max-width: 100%;
+    height: auto;
+    padding: 12px;;
+  }
+
+  div.about {
+    padding: 48px 12px 48px;
+  }
+
+  hr {
+    border-top: rgba(51, 51, 51, .2);
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .view-site {
+    padding: 48px 12px;
+    text-align: center;
+  }
+  
+  p.check-github {
+    font-size: 20px;
+    padding-bottom: 24px;
+  }
+  
+  button.large {
+    font-size: 16px;
+    height: 48px;
+    padding: 0 16px;
+  }
+
 }
