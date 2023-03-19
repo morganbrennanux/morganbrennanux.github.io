@@ -117,10 +117,9 @@ button:hover {
 
 .mobile-nav {
   display: none;
-  position: absolute;
-  top: 48px;
-  left: 12px;
-  right: 12px;
+  padding-top: 48px;
+  padding-left: 12px;
+  padding-right: 12px;
   padding-bottom: 32px;
   justify-content: space-between;
   align-items: center;
@@ -226,10 +225,12 @@ i.fa-square-behance {
 }
 
 .projects {
-  display: grid;
+  /*display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: auto; 
-  row-gap: 1.6rem;
+  row-gap: 1.6rem;*/
+  display: flex;
+  flex-wrap: wrap;
   padding-top: 48px;
   justify-content: space-evenly;
   justify-items: center;
@@ -238,6 +239,7 @@ i.fa-square-behance {
 .case-study {
   max-width: 100%;
   height: auto;
+  padding: 12px;
 }
 
 
@@ -318,13 +320,12 @@ button.mobile-bottom {
   }
 
   div.hero {
-    position: relative;
-    min-width: 320px;
     text-align: center;
     padding: 0;
   }
 
   h1 {
+    min-width: 320px;
     font-size: 32px;
     padding: 116px 27.5px 0 27.5px;
   }
@@ -336,15 +337,8 @@ button.mobile-bottom {
   }
 
   section.lets-connect {
-    width: 100vw;
-    position: absolute;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    width: 100%;
     background-color: var(--primary);
-    height: 48px;
-    z-index:10
   }
   
   
@@ -365,8 +359,7 @@ button.mobile-bottom {
   }
   
   .work {
-    position: relative;
-    padding: 96px 12px 48px;
+    padding: 80px 12px 48px 12px;
     background-color: var(--dark-grey);
   }
   
@@ -405,18 +398,12 @@ button.mobile-bottom {
     padding-left: 4px;
     align-items: baseline;
   }
-  
-  .projects {
-    display: block;
-    padding-top: 48px;
-    justify-content: center;
-    text-align: center;
-  }
+
   
   .case-study {
     max-width: 100%;
     height: auto;
-    padding: 12px;
+    padding: 3px;
   }
 
   div.about {
