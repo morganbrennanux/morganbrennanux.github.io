@@ -327,7 +327,7 @@ button.mobile-bottom {
   h1 {
     min-width: 320px;
     font-size: 32px;
-    padding: 116px 27.5px 0 27.5px;
+    padding: 16px 27.5px 0 27.5px;
   }
 
   p.subhero {
@@ -399,11 +399,10 @@ button.mobile-bottom {
     align-items: baseline;
   }
 
-  
   .case-study {
     max-width: 100%;
     height: auto;
-    padding: 3px;
+    padding: 6px;
   }
 
   div.about {
