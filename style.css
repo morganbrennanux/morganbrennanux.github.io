@@ -229,9 +229,10 @@ i.fa-square-behance {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: auto; 
-  gap: 1.6rem;
+  row-gap: 1.6rem;
   padding-top: 48px;
   justify-content: space-evenly;
+  justify-items: center;
 }
 
 .case-study {
@@ -415,7 +416,7 @@ button.mobile-bottom {
   .case-study {
     max-width: 100%;
     height: auto;
-    padding: 12px;;
+    padding: 12px;
   }
 
   div.about {
